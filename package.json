@@ -1,4 +1,14 @@
 {
+  "name": "fastify-structured-app",
+  "version": "1.0.0",
+  "main": "app/main.ts",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node app/main.ts",
+    "dev": "nodemon --watch 'app/**/*.ts' --exec ts-node app/main.ts",
+    "build": "tsc"
+  },
+
   "dependencies": {
     "@fastify/cors": "^11.1.0",
     "@fastify/jwt": "^10.0.0",
