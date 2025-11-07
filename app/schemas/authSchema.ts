@@ -57,7 +57,7 @@ export const loginSchema = {
   },
 };
 
-// GOOGLE AUTH Schema (pas de callback)
+// GOOGLE AUTH Schema 
 export const googleAuthSchema = {
   tags: ['Auth'],
   description: 'Authentification Google avec code OAuth',

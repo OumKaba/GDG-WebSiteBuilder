@@ -62,7 +62,7 @@ export const AuthService = {
         return { success: false, error: 'Email ou mot de passe incorrect' };
       }
 
-      // Vérifier que c'est un compte email (pas Google)
+      // Vérifier que c'est un compte email
       if (user.provider !== 'email') {
         return { 
           success: false, 

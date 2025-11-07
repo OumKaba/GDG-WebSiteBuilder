@@ -1,15 +1,12 @@
-// ============================================
-// routes/authRoutes.ts - VERSION CORRIGÉE
-// ============================================
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { AuthService } from '../services/authService';
 import { authMiddleware } from '../middlewares/authMiddleware';
 import {
   registerSchema,
   loginSchema,
-  googleAuthSchema,  // ← Changé de googleCallbackSchema
+  googleAuthSchema,  
   getProfileSchema,
-  logoutSchema,      // ← Ajouté
+  logoutSchema,      
 } from '../schemas/authSchema';
 
 export async function authRoutes(fastify: FastifyInstance) {
@@ -50,9 +47,9 @@ export async function authRoutes(fastify: FastifyInstance) {
     }
   });
 
-  // GOOGLE AUTH (pas de callback)
+  // GOOGLE AUTH 
   fastify.post('/auth/google', {
-    schema: googleAuthSchema,  // ← Changé
+    schema: googleAuthSchema,
   }, async (request: FastifyRequest, reply: FastifyReply) => {
     try {
       const { code } = request.body as any;
