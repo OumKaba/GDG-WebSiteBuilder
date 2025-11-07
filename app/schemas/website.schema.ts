@@ -1,6 +1,4 @@
-// ============================================
 // FICHIER 1: schemas/websiteSchema.ts
-// ============================================
 import { Type } from '@sinclair/typebox';
 
 // Schema de base Website

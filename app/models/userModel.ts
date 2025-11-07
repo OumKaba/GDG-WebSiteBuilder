@@ -8,6 +8,11 @@ export interface CreateUserInput {
   providerId?: string;
 }
 
+export interface UpdateUserInput {
+  email?: string;
+  name?: string | null;
+}
+
 export const UserModel = {
   // Créer un utilisateur
   create: async (data: CreateUserInput) => {
@@ -27,6 +32,7 @@ export const UserModel = {
   findByEmail: async (email: string) => {
     return await prisma.user.findUnique({
       where: { email },
+      
     });
   },
 
